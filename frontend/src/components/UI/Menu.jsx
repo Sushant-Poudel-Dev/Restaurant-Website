@@ -22,24 +22,38 @@ const Menu = ({ category }) => {
     return typeof price === "number" ? price.toFixed(2) : "0.00";
   };
 
-  const handleAddToCart = (itemId) => {
-    const quantity = cartItems[itemId] || 1;
+  const handleAddToCart = (item) => {
+    const quantity = cartItems[item.id] || 1;
+
+    const cartItem = {
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      quantity: quantity,
+      image: imageErrors[item.id] ? PlaceholderImage : item.image,
+    };
+
+    addToCart(cartItem);
+
     setAddedToCart((prev) => ({
       ...prev,
-      [itemId]: quantity,
+      [item.id]: quantity,
     }));
-    addToCart(quantity);
 
-    // Show toast notification
-    toast.success(`Added ${quantity} item${quantity > 1 ? "s" : ""} to cart`, {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "dark",
-    });
+    toast.success(
+      `Added ${quantity} ${item.name}${quantity > 1 ? "s" : ""} to cart`,
+      {
+        position: "bottom-right",
+        autoClose: 3000,
+        theme: "dark",
+      }
+    );
+
+    // Reset quantity after adding to cart
+    setCartItems((prev) => ({
+      ...prev,
+      [item.id]: 1,
+    }));
   };
 
   const handleRemoveFromCart = (itemId) => {
@@ -92,7 +106,7 @@ const Menu = ({ category }) => {
                   </div>
                   <button
                     className='addToCartBtn'
-                    onClick={() => handleAddToCart(item.id)}
+                    onClick={() => handleAddToCart(item)}
                   >
                     Add to Cart
                   </button>

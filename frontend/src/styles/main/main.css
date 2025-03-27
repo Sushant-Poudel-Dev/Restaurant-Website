@@ -30,7 +30,135 @@
   font-size: 12px;
   font-weight: bold;
 }
+.navbar .navbarCart .logo {
+  cursor: pointer;
+}
+.navbar .navbarCart .rewardsContainer {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: var(--main-bg-color2);
+  border-radius: var(--button-border-radius);
+  padding: 0.5rem;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+  animation: slideDown 0.3s ease;
+}
+.navbar .navbarCart .rewardsContainer::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background: var(--main-bg-color2);
+  transform: rotate(45deg);
+}
+.navbar .navbarCart .rewardsContainer .rewardCard {
+  position: relative;
+  background: var(--main-bg-color);
+  border-radius: var(--button-border-radius);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard.achieved {
+  background: var(--third-color);
+}
+.navbar .navbarCart .rewardsContainer .rewardCard.achieved .rewardName,
+.navbar .navbarCart .rewardsContainer .rewardCard.achieved .rewardIcon {
+  color: var(--main-bg-color) !important;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard.claimed {
+  opacity: 0.7;
+  background: var(--main-bg-color2);
+  cursor: default;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard.claimed::after {
+  content: "Claimed";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0.8rem;
+  color: var(--third-color);
+  background: var(--main-bg-color);
+  padding: 2px 8px;
+  border-radius: var(--button-border-radius);
+}
+.navbar .navbarCart .rewardsContainer .rewardCard.claimed .rewardName,
+.navbar .navbarCart .rewardsContainer .rewardCard.claimed .rewardProgress,
+.navbar .navbarCart .rewardsContainer .rewardCard.claimed .rewardIcon {
+  color: var(--para) !important;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .rewardInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .rewardInfo .rewardName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .rewardInfo .rewardProgress {
+  font-size: 0.8rem;
+  color: var(--para);
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .rewardInfo .claimText {
+  font-size: 0.8rem;
+  color: var(--main-bg-color);
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.9;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard:hover .claimText {
+  opacity: 1;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .rewardIcon {
+  font-size: 1.5rem;
+}
+.navbar .navbarCart .rewardsContainer .rewardCard .progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--third-color);
+  transition: width 0.3s ease;
+}
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .footer .footerTop {
   background-color: var(--main-bg-color2);
   color: var(--para);
@@ -106,8 +234,8 @@
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 .home .homeHero .heroImageDecor1 {
-  top: 21rem;
-  right: 42rem;
+  top: 19rem;
+  right: 38rem;
 }
 .home .homeHero .heroImageDecor2 {
   top: 2rem;
@@ -698,6 +826,204 @@
   -o-object-fit: cover;
      object-fit: cover;
   filter: blur(5px);
+}
+
+.cartPage {
+  min-height: 100vh;
+  padding: 2rem;
+}
+.cartPage .cartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+.cartPage .cartContainer .cartLeft .emptyCart {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--para);
+}
+.cartPage .cartContainer .cartLeft .cartItems {
+  margin-top: 1rem;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex: 1;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--button-border-radius);
+  overflow: hidden;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemDetails h3 {
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemDetails .itemPrice {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemDetails .itemUnitPrice {
+  color: var(--para);
+  font-size: 0.9rem;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemInfo .itemDetails .rewardLabel {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: var(--main-bg-color2);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--button-border-radius);
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemControls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemControls .quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemControls .quantityControls button {
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  min-width: 30px;
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemControls .quantityControls span {
+  min-width: 30px;
+  text-align: center;
+  color: var(--heading);
+}
+.cartPage .cartContainer .cartLeft .cartItems .cartItem .itemControls .removeBtn {
+  color: #ff4444;
+  margin-left: 1rem;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions {
+  background: var(--main-bg-color2);
+  padding: 1rem;
+  border-radius: var(--button-border-radius);
+  margin-bottom: 1rem;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .optionButtons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .optionButtons button {
+  flex: 1;
+  margin: 0;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .optionButtons button.active {
+  background: var(--third-color);
+  color: var(--main-bg-color);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput,
+.cartPage .cartContainer .cartRight .deliveryOptions .pickupTime {
+  margin-top: 1rem;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput label,
+.cartPage .cartContainer .cartRight .deliveryOptions .pickupTime label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--para);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput textarea,
+.cartPage .cartContainer .cartRight .deliveryOptions .pickupTime textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem;
+  border-radius: var(--button-border-radius);
+  background: var(--main-bg-color);
+  border: 1px solid var(--border);
+  color: var(--para);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput input[type=time],
+.cartPage .cartContainer .cartRight .deliveryOptions .pickupTime input[type=time] {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--main-bg-color);
+  border: 1px solid var(--border);
+  color: var(--para);
+  border-radius: var(--button-border-radius);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput {
+  margin-top: 1rem;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--para);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--main-bg-color);
+  border: 1px solid var(--border);
+  color: var(--para);
+  border-radius: var(--button-border-radius);
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput input:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.cartPage .cartContainer .cartRight .deliveryOptions .addressInput .addressRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.5rem;
+}
+.cartPage .cartContainer .cartRight .orderSummary {
+  background: var(--main-bg-color2);
+  padding: 1rem;
+  border-radius: var(--button-border-radius);
+  color: white;
+}
+.cartPage .cartContainer .cartRight .orderSummary .summaryItem,
+.cartPage .cartContainer .cartRight .orderSummary .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.cartPage .cartContainer .cartRight .orderSummary .summaryTotal {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+.cartPage .cartContainer .cartRight .orderSummary .checkoutBtn {
+  width: 100%;
+  margin-top: 1rem;
+  background: var(--third-color);
+  color: var(--main-bg-color);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.cartPage .cartContainer .cartRight .orderSummary .checkoutBtn:hover {
+  transform: translateY(-2px);
+  background: var(--third-color);
+}
+.cartPage .cartContainer .cartRight .orderSummary .checkoutBtn:active {
+  transform: translateY(0);
 }
 
 body {
