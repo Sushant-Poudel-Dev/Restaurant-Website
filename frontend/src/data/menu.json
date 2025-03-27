@@ -1,0 +1,734 @@
+{
+  "categories": [
+    {
+      "id": "appetizers",
+      "name": "Appetizers",
+      "items": [
+        {
+          "id": "chicken-wings",
+          "name": "Chicken Wings Niramish Style",
+          "description": "Six pieces. Chicken party wings marinated in special tondoori sauce, grilled in clay tondoori oven, and topped with chefs special sweet and sour curry sauce",
+          "price": 11.0,
+          "image": "/images/menu/chicken-wings.jpg"
+        },
+        {
+          "id": "vegetable-samosas",
+          "name": "Vegetable Samosas",
+          "description": "Two pieces. Triangular puffed pastry stuffed with cubed potatoes, green peas, carrots, and mildly spiced herbs",
+          "price": 5.0,
+          "image": "/images/menu/veg-samosas.jpg"
+        },
+        {
+          "id": "vegetable-pakoras",
+          "name": "Vegetable Pakoras",
+          "description": "Two pieces. Freshly sliced mixed vegetable fritters with chick pea flour, whole coriander, black cumin, and other herbs",
+          "price": 4.99,
+          "image": "/images/menu/pakoras.jpg"
+        },
+        {
+          "id": "chicken-somosa",
+          "name": "Chicken Somosa",
+          "price": 6.0,
+          "image": "/images/menu/chicken-somosa.jpg"
+        },
+        {
+          "id": "chana-bhaji",
+          "name": "Chana Bhaji",
+          "price": 6.0,
+          "image": "/images/menu/chana-bhaji.jpg"
+        },
+        {
+          "id": "shrimp-poori",
+          "name": "Shrimp Poori",
+          "price": 10.0,
+          "image": "/images/menu/shrimp-poori.jpg"
+        },
+        {
+          "id": "papadum",
+          "name": "Papadum",
+          "price": 2.0,
+          "image": "/images/menu/papadum.jpg"
+        },
+        {
+          "id": "pani-poori",
+          "name": "Pani Poori",
+          "price": 9.99,
+          "image": "/images/menu/pani-poori.jpg"
+        },
+        {
+          "id": "somosa-chat",
+          "name": "Somosa Chat",
+          "description": "vegan",
+          "price": 10.99,
+          "image": "/images/menu/somosa-chat.jpg"
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "items": [
+        {
+          "id": "mulligatawny-soup",
+          "name": "Mulligatawny Soup",
+          "description": "Traditional Indian soup with moshoorer daal (orange colored lentils), lemon juice, fresh garlic cloves, and other spices",
+          "price": 4.99,
+          "image": "/images/menu/mulligatawny-soup.jpg"
+        },
+        {
+          "id": "coconut-soup",
+          "name": "Coconut Soup",
+          "description": "Shredded coconut flakes and coconut milk cooked with spicy tomato sauce and curry leaves",
+          "price": 6.0,
+          "image": "/images/menu/coconut-soup.jpg"
+        },
+        {
+          "id": "mushroom-soup",
+          "name": "Mushroom Soup",
+          "price": 6.0,
+          "image": "/images/menu/mushroom-soup.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chef-specials",
+      "name": "Chef Specials",
+      "items": [
+        {
+          "id": "lamb-tikka-masala",
+          "name": "Lamb Tikka Masala",
+          "description": "Boneless cubed grilled lamb kabab prepared in chefs special tikka masala sauce. Served with plain baash-moti rice flavored with cardamom, cinnamon, bay leaves, and whole cumin",
+          "price": 23.99,
+          "image": "/images/menu/lamb-tikka-masala.jpg"
+        },
+        {
+          "id": "shrimp-tikka-masala",
+          "name": "Shrimp Tikka Masala",
+          "description": "Peeled jumbo shrimp grilled in tondoori oven and sauteed again in Chefs special tikka masala sauce. Served with plain baash-moti rice flavored with cardamom, cinnamon, bay leaves, and whole cumin",
+          "price": 23.99,
+          "image": "/images/menu/shrimp-tikka-masala.jpg"
+        },
+        {
+          "id": "chicken-tikka-masala",
+          "name": "Chicken Tikka Masala",
+          "description": "Succulent pieces of boneless white meat chicken marinated in tandoori sauce, grilled in tandoori clay oven, and cooked again in a special flavorful cream sauce with peeled tomato and different herbs",
+          "price": 18.99,
+          "image": "/images/menu/chicken-tikka-masala.jpg"
+        },
+        {
+          "id": "butter-chicken",
+          "name": "Butter Chicken",
+          "price": 18.99,
+          "image": "/images/menu/butter-chicken.jpg"
+        },
+        {
+          "id": "mix-tikka-masala",
+          "name": "Mix Tikka Masala",
+          "description": "Chicken, Lamb, Shrimp",
+          "price": 23.99,
+          "image": "/images/menu/mix-tikka-masala.jpg"
+        },
+        {
+          "id": "muglai-chicken",
+          "name": "Muglai Chicken",
+          "price": 18.99,
+          "image": "/images/menu/muglai-chicken.jpg"
+        },
+        {
+          "id": "chicken-makhani",
+          "name": "Chicken Makhani",
+          "price": 18.99,
+          "image": "/images/menu/chicken-makhani.jpg"
+        },
+        {
+          "id": "paneer-tikka-masala",
+          "name": "Paneer Tikka Masala",
+          "price": 16.99,
+          "image": "/images/menu/paneer-tikka-masala.jpg"
+        },
+        {
+          "id": "tofu-tikka-masala",
+          "name": "Tofu Tikka Masala",
+          "price": 16.99,
+          "image": "/images/menu/tofu-tikka-masala.jpg"
+        },
+        {
+          "id": "salmon-tikka-masala",
+          "name": "Salmon Fish Tikka Masala",
+          "description": "Salmon Fish With Tikka Masala Sauce",
+          "price": 23.99,
+          "image": "/images/menu/salmon-tikka-masala.jpg"
+        },
+        {
+          "id": "extra-rice",
+          "name": "Extra Rice",
+          "price": 2.99,
+          "image": "/images/menu/extra-rice.jpg"
+        },
+        {
+          "id": "chicken-tandoori-masala",
+          "name": "Chicken Tandoori Masala",
+          "description": "Grill chicken with brown sauce ginger garlic onion green pepper and chef special spices",
+          "price": 19.99,
+          "image": "/images/menu/chicken-tandoori-masala.jpg"
+        },
+        {
+          "id": "chicken-tikka-curry",
+          "name": "Chicken Tikka Curry",
+          "description": "boneless grill chicken with brown curry sauce ginger garlic and chef special spices garnish with cilantro",
+          "price": 19.99,
+          "image": "/images/menu/chicken-tikka-curry.jpg"
+        },
+        {
+          "id": "vegetable-tikka-masala",
+          "name": "Vegetable Tikka Masala",
+          "price": 16.99,
+          "image": "/images/menu/vegetable-tikka-masala.jpg"
+        },
+        {
+          "id": "peas-rice",
+          "name": "Peas Rice",
+          "price": 4.99,
+          "image": "/images/menu/peas-rice.jpg"
+        }
+      ]
+    },
+    {
+      "id": "tandoori-specials",
+      "name": "Tandoori Specials",
+      "items": [
+        {
+          "id": "mixed-tandoori-platter",
+          "name": "Mixed Tandoori Platter",
+          "description": "Chicken tandoori, Chicken tikka, Lamb tandoori, and Shrimp tandoori Salmon Tandoori grilled in tondoori oven",
+          "price": 23.99,
+          "image": "/images/menu/mixed-tandoori-platter.jpg"
+        },
+        {
+          "id": "lamb-tandoori",
+          "name": "Lamb Tandoori",
+          "description": "Lamb tenderloin marinated with yogurt, lemon juice, mint leaves, and paach foron",
+          "price": 21.99,
+          "image": "/images/menu/lamb-tandoori.jpg"
+        },
+        {
+          "id": "shrimp-tandoori",
+          "name": "Shrimp Tandoori",
+          "description": "Peeled jumbo shrimp marinated with yogurt methi leaves, lemon juice, and Chefs special spices",
+          "price": 21.99,
+          "image": "/images/menu/shrimp-tandoori.jpg"
+        },
+        {
+          "id": "chicken-tikka-kabab",
+          "name": "Chicken Tikka / Kabab",
+          "description": "Grilled tender boneless white meat chicken marinated with yogurt, lemon juice, and special tondoori sauce",
+          "price": 17.99,
+          "image": "/images/menu/chicken-tikka-kabab.jpg"
+        },
+        {
+          "id": "chicken-tandoori",
+          "name": "Chicken Tandoori",
+          "description": "Grilled on the bone dark meat chicken marinated with yogurt, lemon juice, and special tondoori sauce",
+          "price": 16.99,
+          "image": "/images/menu/chicken-tandoori.jpg"
+        },
+        {
+          "id": "tofu-tandoori",
+          "name": "Tofu Tandoori",
+          "price": 15.99,
+          "image": "/images/menu/tofu-tandoori.jpg"
+        },
+        {
+          "id": "paneer-tandoori",
+          "name": "Paneer Tandoori",
+          "image": "/images/menu/paneer-tandoori.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lamb-specials",
+      "name": "Lamb Specials",
+      "items": [
+        {
+          "id": "lamb-curry",
+          "name": "Lamb Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-curry.jpg"
+        },
+        {
+          "id": "lamb-coconut",
+          "name": "Lamb Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, and in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-coconut.jpg"
+        },
+        {
+          "id": "lamb-passanda",
+          "name": "Lamb Passanda",
+          "description": "Mildly spiced, with banana chips, shredded coconut, and golden raisins in a creamy yogurt sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-passanda.jpg"
+        },
+        {
+          "id": "lamb-korma",
+          "name": "Lamb Korma",
+          "description": "Mildly spiced dish with turmeric, fresh chopped garlic, and ginger in a thick creamy sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-korma.jpg"
+        },
+        {
+          "id": "lamb-aloor-jhol",
+          "name": "Lamb Aloor Jhol",
+          "description": "Prepared with cubed potatoes in a mild turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-aloor-jhol.jpg"
+        },
+        {
+          "id": "lamb-vindaloo",
+          "name": "Lamb Vindaloo",
+          "description": "Prepared with cubed potatoes in a very spicy turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-vindaloo.jpg"
+        },
+        {
+          "id": "lamb-shaak-ponir",
+          "name": "Lamb Shaak Ponir",
+          "description": "Prepared with chopped paalong shaak (spinach) in a light cream sauce with cubed homemade ponir (cheese). Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-shaak-ponir.jpg"
+        },
+        {
+          "id": "lamb-shaak",
+          "name": "Lamb Shaak",
+          "description": "Prepared with chopped paalong shaak (spinach), roasted garlic, grilled onions, tomato, and Chefs special herbs. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-shaak.jpg"
+        },
+        {
+          "id": "lamb-bhoona",
+          "name": "Lamb Bhoona",
+          "description": "Stir fried in a korai (Indian wok) with fresh onions, tomatoes, and green bell peppers. Served with aromatic baash-moti rice flavored with cardamom, cumin, bay leaves, and Chefs special sauce",
+          "price": 19.99,
+          "image": "/images/menu/lamb-bhoona.jpg"
+        },
+        {
+          "id": "lamb-shobjir-jhol",
+          "name": "Lamb Shobjir Jhol",
+          "description": "Prepared with a delightful assortment of fresh vegetables including carrots, green peas, potatoes, and cauliflower. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-shobjir-jhol.jpg"
+        },
+        {
+          "id": "lamb-rogan-josh",
+          "name": "Lamb Rogan Josh",
+          "description": "Prepared with sliced cooked tomatoes, bell pepper, in Chefs special thick sauce, and topped with grilled onions. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-rogan-josh.jpg"
+        },
+        {
+          "id": "lamb-dhaanshaak",
+          "name": "Lamb Dhaanshaak",
+          "description": "Prepared in a light moshoorer dal (lentil) sauce with turmeric, ginger and garlic, with Chefs special sweet and spicy taste. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 19.99,
+          "image": "/images/menu/lamb-dhaanshaak.jpg"
+        },
+        {
+          "id": "lamb-mango",
+          "name": "Lamb Mango",
+          "price": 19.99,
+          "image": "/images/menu/lamb-mango.jpg"
+        }
+      ]
+    },
+    {
+      "id": "beef-specials",
+      "name": "Beef Specials",
+      "items": [
+        {
+          "id": "beef-curry",
+          "name": "Beef Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-curry.jpg"
+        },
+        {
+          "id": "beef-coconut",
+          "name": "Beef Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-coconut.jpg"
+        },
+        {
+          "id": "beef-passanda",
+          "name": "Beef Passanda",
+          "description": "Mildly spiced, with banana chips, shredded coconut, and golden raisins in a creamy yogurt sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-passanda.jpg"
+        },
+        {
+          "id": "beef-korma",
+          "name": "Beef Korma",
+          "description": "Mildly spiced dish with turmeric, fresh chopped garlic, and ginger in a thick creamy sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-korma.jpg"
+        },
+        {
+          "id": "beef-aloor-jhol",
+          "name": "Beef Aloor Jhol",
+          "description": "Prepared with cubed potatoes in a mild turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-aloor-jhol.jpg"
+        },
+        {
+          "id": "beef-vindaloo",
+          "name": "Beef Vindaloo",
+          "description": "Prepared with cubed potatoes in a very spicy turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-vindaloo.jpg"
+        },
+        {
+          "id": "beef-shaak-ponir",
+          "name": "Beef Shaak Ponir",
+          "description": "Prepared with chopped paalong shaak (spinach) in a light cream sauce with cubed homemade ponir (cheese). Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-shaak-ponir.jpg"
+        },
+        {
+          "id": "beef-shaak",
+          "name": "Beef Shaak",
+          "description": "Prepared with chopped paalong shaak (spinach), roasted garlic, grilled onions, tomato, and chefs special herbs. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-shaak.jpg"
+        },
+        {
+          "id": "beef-bhoona",
+          "name": "Beef Bhoona",
+          "description": "Stir fried in a korai (Indian wok) with fresh onions, tomatoes, and green bell peppers served in chefs special sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-bhoona.jpg"
+        },
+        {
+          "id": "beef-shobjir-jhol",
+          "name": "Beef Shobjir Jhol",
+          "description": "Prepared with a delightful assortment of fresh vegetables including carrots, green peas, potatoes, cauliflower, and etc. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-shobjir-jhol.jpg"
+        },
+        {
+          "id": "beef-rogan-josh",
+          "name": "Beef Rogan Josh",
+          "description": "Prepared with sliced cooked tomatoes, bell pepper, in chefs special thick sauce, and topped with grilled onions. Served with aromatic basmati rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-rogan-josh.jpg"
+        },
+        {
+          "id": "beef-dhaanshaak",
+          "name": "Beef Dhaanshaak",
+          "description": "Prepared in a light moshoorer dal (lentil) sauce with turmeric, ginger and garlic with a chefs special sweet and spicy taste. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/beef-dhaanshaak.jpg"
+        },
+        {
+          "id": "beef-mango",
+          "name": "Beef Mango",
+          "price": 17.99,
+          "image": "/images/menu/beef-mango.jpg"
+        }
+      ]
+    },
+    {
+      "id": "goat-specials",
+      "name": "Goat Specials",
+      "items": [
+        {
+          "id": "goat-curry",
+          "name": "Goat Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-curry.jpg"
+        },
+        {
+          "id": "goat-coconut",
+          "name": "Goat Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, and in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-coconut.jpg"
+        },
+        {
+          "id": "goat-passanda",
+          "name": "Goat Passanda",
+          "description": "Mildly spiced, with banana chips, shredded coconut, and golden raisins in a creamy yogurt sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-passanda.jpg"
+        },
+        {
+          "id": "goat-korma",
+          "name": "Goat Korma",
+          "description": "Mildly spiced dish with turmeric, fresh chopped garlic, and ginger in a thick creamy sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-korma.jpg"
+        },
+        {
+          "id": "goat-aloor-jhol",
+          "name": "Goat Aloor Jhol",
+          "description": "Prepared with cubed potatoes in a mild turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-aloor-jhol.jpg"
+        },
+        {
+          "id": "goat-vindaloo",
+          "name": "Goat Vindaloo",
+          "description": "Prepared with cubed potatoes in a very spicy turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-vindaloo.jpg"
+        },
+        {
+          "id": "goat-shaak-ponir",
+          "name": "Goat Shaak Ponir",
+          "description": "Prepared with chopped paalong shaak (spinach) in a light cream sauce with cubed homemade ponir (cheese). Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-shaak-ponir.jpg"
+        },
+        {
+          "id": "goat-shaak",
+          "name": "Goat Shaak",
+          "description": "Prepared with chopped paalong shaak (spinach), roasted garlic, grilled onions, tomato, and chefs special herbs. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 20.99,
+          "image": "/images/menu/goat-shaak.jpg"
+        },
+        {
+          "id": "goat-bhoona",
+          "name": "Goat Bhoona",
+          "description": "Stir fried in a korai (Indian wok) with fresh onions, tomatoes and green bell peppers, and served in chefs special sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-bhoona.jpg"
+        },
+        {
+          "id": "goat-shobjir-jhol",
+          "name": "Goat Shobjir Jhol",
+          "description": "Prepared with a delightful assortment of fresh vegetables including carrots, green peas, potatoes, cauliflower, and etc. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-shobjir-jhol.jpg"
+        },
+        {
+          "id": "goat-rogan-josh",
+          "name": "Goat Rogan Josh",
+          "description": "Prepared with sliced cooked tomatoes, bell pepper, in chefs special thick sauce, and topped with grilled onions. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-rogan-josh.jpg"
+        },
+        {
+          "id": "goat-dhaanshaak",
+          "name": "Goat Dhaanshaak",
+          "description": "Prepared in a light moshoorer dal (lentil) sauce with turmeric, ginger and garlic, and with a chefs special sweet and spicy taste. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/goat-dhaanshaak.jpg"
+        },
+        {
+          "id": "goat-mango",
+          "name": "Goat Mango",
+          "price": 18.99,
+          "image": "/images/menu/goat-mango.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-specials",
+      "name": "Chicken Specials",
+      "items": [
+        {
+          "id": "chicken-curry",
+          "name": "Chicken Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-curry.jpg"
+        },
+        {
+          "id": "chicken-coconut",
+          "name": "Chicken Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, and in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-coconut.jpg"
+        },
+        {
+          "id": "chicken-passanda",
+          "name": "Chicken Passanda",
+          "description": "Mildly spiced, with banana chips, shredded coconut, and golden raisins in a creamy yogurt sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-passanda.jpg"
+        },
+        {
+          "id": "chicken-korma",
+          "name": "Chicken Korma",
+          "description": "Mildly spiced dish with turmeric, fresh chopped garlic, and ginger in a thick creamy sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-korma.jpg"
+        },
+        {
+          "id": "chicken-aloor-jhol",
+          "name": "Chicken Aloor Jhol",
+          "description": "Prepared with cubed potatoes in a mild turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-aloor-jhol.jpg"
+        },
+        {
+          "id": "chicken-vindaloo",
+          "name": "Chicken Vindaloo",
+          "description": "Prepared with cubed potatoes in a very spicy turmeric sauce with a touch of fresh lemon juice vinegar mix. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-vindaloo.jpg"
+        },
+        {
+          "id": "chicken-shaak-ponir",
+          "name": "Chicken Shaak Ponir",
+          "description": "Prepared with chopped paalong shaak (spinach) in a light cream sauce with cubed homemade ponir (cheese). Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-shaak-ponir.jpg"
+        },
+        {
+          "id": "chicken-shaak",
+          "name": "Chicken Shaak",
+          "description": "Prepared with chopped paalong shaak (spinach), roasted garlic, grilled onions, tomato, and chefs special herbs. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-shaak.jpg"
+        },
+        {
+          "id": "chicken-bhoona",
+          "name": "Chicken Bhoona",
+          "description": "Stir fried in a korai (Indian wok) with fresh onions, tomatoes, green bell peppers, and served in chefs special sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-bhoona.jpg"
+        },
+        {
+          "id": "chicken-shobjir-jhol",
+          "name": "Chicken Shobjir Jhol",
+          "description": "Prepared with a delightful assortment of fresh vegetables including carrots, green peas, potatoes, and cauliflower. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-shobjir-jhol.jpg"
+        },
+        {
+          "id": "chicken-rogan-josh",
+          "name": "Chicken Rogan Josh",
+          "description": "Prepared with sliced cooked tomatoes, bell pepper, in chefs special thick sauce, and topped with grilled onions. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-rogan-josh.jpg"
+        },
+        {
+          "id": "chicken-dhaanshaak",
+          "name": "Chicken Dhaanshaak",
+          "description": "Prepared in a light moshoorer dal (lentil) sauce with turmeric, ginger and garlic, and with a chefs special sweet and spicy taste. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 16.99,
+          "image": "/images/menu/chicken-dhaanshaak.jpg"
+        },
+        {
+          "id": "extra-rice",
+          "name": "Extra Rice",
+          "price": 2.99,
+          "image": "/images/menu/extra-rice.jpg"
+        },
+        {
+          "id": "chicken-mango",
+          "name": "Chicken Mango",
+          "price": 16.99,
+          "image": "/images/menu/chicken-mango.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shrimp-specials",
+      "name": "Shrimp Specials",
+      "items": [
+        {
+          "id": "shrimp-curry",
+          "name": "Shrimp Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/shrimp-curry.jpg"
+        },
+        {
+          "id": "shrimp-coconut",
+          "name": "Shrimp Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, and in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 18.99,
+          "image": "/images/menu/shrimp-coconut.jpg"
+        }
+      ]
+    },
+    {
+      "id": "salmon-specials",
+      "name": "Salmon Specials",
+      "items": [
+        {
+          "id": "salmon-curry",
+          "name": "Salmon Curry",
+          "description": "Mildly spiced with turmeric, onion, ginger, garlic, coriander, and cumin in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/salmon-curry.jpg"
+        },
+        {
+          "id": "salmon-coconut",
+          "name": "Salmon Coconut",
+          "description": "Mildly spiced dish with coconut milk, cream, in a special curry sauce. Served with aromatic baash-moti rice flavored with cardamom, cumin, and bay leaves",
+          "price": 17.99,
+          "image": "/images/menu/salmon-coconut.jpg"
+        }
+      ]
+    },
+    {
+      "id": "vegetarian-specialties",
+      "name": "Vegetarian Specialties",
+      "items": [
+        {
+          "id": "shaak-ponir-vegetarian",
+          "name": "Shaak Ponir (Vegetarian)",
+          "description": "Chopped paalong shaak (spinach) prepared in a delightfully light cream sauce with cubed ponir (Indian cheese)",
+          "price": 15.99,
+          "image": "/images/menu/shaak-ponir-veg.jpg"
+        },
+        {
+          "id": "chaana-masala",
+          "name": "Chaana Masala",
+          "description": "Chickpeas sauteed with onion and ginger in a mildly spiced special creamy tomato sauce with methi leaves (fenugreek)",
+          "price": 14.99,
+          "image": "/images/menu/chaana-masala.jpg"
+        },
+        {
+          "id": "gobi-makhani",
+          "name": "Gobi Makhani",
+          "description": "Cauliflower florets sauteed with grilled onion, tomatoes, and ginger in mildly spiced makhani sauce",
+          "price": 15.99,
+          "image": "/images/menu/gobi-makhani.jpg"
+        },
+        {
+          "id": "shobjir-korma",
+          "name": "Shobjir Korma",
+          "description": "Mixed vegetable cooked in a light yellow cream sauce with chefs special selection of herbs",
+          "price": 14.99,
+          "image": "/images/menu/shobjir-korma.jpg"
+        },
+        {
+          "id": "shobji-makhani",
+          "name": "Shobji Makhani",
+          "description": "Mixed vegetable prepared in a special tomato buttery cream sauce with methi leaves (fenugreek)",
+          "price": 15.0,
+          "image": "/images/menu/shobji-makhani.jpg"
+        },
+        {
+          "id": "ponir-tikka-masala",
+          "name": "Ponir Tikka Masala",
+          "description": "Homemade ponir (cheese) prepared in a special tomato buttery cream sauce with methi leaves",
+          "price": 16.99,
+          "image": "/images/menu/ponir-tikka-masala.jpg"
+        },
+        {
+          "id": "aloo-motor-paneer",
+          "name": "Aloo Motor Paneer",
+          "description": "Potato Green Peas And Home Made Cheese Make with curry base sauce. garnish with cilantro",
+          "price": 15.99,
+          "image": "/images/menu/aloo-motor-paneer.jpg"
+        }
+      ]
+    }
+  ]
+}

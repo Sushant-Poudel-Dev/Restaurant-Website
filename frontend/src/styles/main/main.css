@@ -1,0 +1,829 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+.navbar .navbarLinks ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.navbar .navbarLinks ul li a {
+  margin: 0 1rem;
+}
+.navbar .navbarCart {
+  position: relative;
+}
+.navbar .navbarCart .cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--third-color);
+  color: var(--main-bg-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer .footerTop {
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.footer .footerTop .footerLinks {
+  display: flex;
+  gap: 5rem;
+}
+.footer .footerTop .footerLinks ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footerTop .footerLinks ul li {
+  text-align: center;
+}
+.footer .footerTop .footerLinks ul li a {
+  color: var(--para);
+}
+.footer .footerTop .footerLinks ul li a:hover {
+  color: var(--heading);
+}
+.footer .footerTop .footerSocials {
+  text-align: center;
+}
+.footer .footerTop .footerSocials .logo {
+  margin: 0.5rem;
+}
+.footer .footerBottom div {
+  background-color: var(--main-bg-color2);
+  border-top: 1px solid var(--border);
+  color: var(--para);
+  padding: 1rem;
+  text-align: center;
+}
+
+.home .homeHero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+.home .homeHero .heroText {
+  width: 40%;
+}
+.home .homeHero .heroImage {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.home .homeHero .heroImage img {
+  border-radius: var(--button-border-radius);
+  width: 80%;
+  opacity: 1;
+}
+.home .homeHero .heroImage img:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: all 1s ease;
+  transform: scale(1.01);
+}
+.home .homeHero .heroImageDecor1,
+.home .homeHero .heroImageDecor2 {
+  position: absolute;
+  width: 2rem;
+  height: 12rem;
+  background-color: var(--main-bg-color2);
+  transform: rotate(-45deg);
+  border-radius: 1rem 2rem 1rem 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.home .homeHero .heroImageDecor1 {
+  top: 21rem;
+  right: 42rem;
+}
+.home .homeHero .heroImageDecor2 {
+  top: 2rem;
+  right: 10rem;
+}
+.home .homeFeature {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+.home .homeServices {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--main-bg-color);
+}
+.home .homeServices h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--heading-spacing);
+}
+.home .homeServices h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--third-color);
+}
+.home .homeServices .servicesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.home .homeServices .servicesContainer .serviceCard {
+  width: 300px;
+  padding: 2rem;
+  background-color: var(--main-bg-color2);
+  border-radius: var(--button-border-radius);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.home .homeServices .servicesContainer .serviceCard .serviceImage {
+  width: 100%;
+  height: 200px;
+  background-color: var(--border);
+  border-radius: var(--button-border-radius);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.home .homeServices .servicesContainer .serviceCard .serviceImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.home .homeServices .servicesContainer .serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.home .homeServices .servicesContainer .serviceCard:hover .serviceImage img {
+  transform: scale(1.1);
+}
+.home .homeServices .servicesContainer .serviceCard h3 {
+  color: var(--third-color);
+  margin-bottom: 1rem;
+}
+.home .homeServices .servicesContainer .serviceCard p {
+  line-height: 1.6;
+}
+.home .homeSpecials {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--main-bg-color2);
+}
+.home .homeSpecials .specialsContainer {
+  max-width: 1200px;
+  margin: 0rem auto;
+  padding: 0 1rem;
+}
+.home .homeSpecials .specialsContainer .specialsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--main-bg-color);
+  padding: 1rem;
+  border-radius: var(--button-border-radius);
+  transition: transform 0.3s ease;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialImage {
+  width: 100px;
+  height: 100px;
+  background: var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  text-align: left;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialContent .specialInfo h3 {
+  color: var(--third-color);
+  margin-bottom: 0.5rem;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialContent .specialInfo p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.home .homeSpecials .specialsContainer .specialsList .specialItem .specialContent .price {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+.home .homeReviews {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--main-bg-color);
+}
+.home .homeReviews h2 {
+  margin-bottom: 4rem;
+}
+.home .homeReviews .reviewsContainer {
+  padding: 2rem;
+}
+.home .homeReviews .reviewsContainer .reviewCard {
+  width: 400px !important;
+  padding: 2rem;
+  background: var(--main-bg-color2);
+  border-radius: var(--button-border-radius);
+  margin: 1rem;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+}
+.home .homeReviews .reviewsContainer .reviewCard.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+.home .homeReviews .reviewsContainer .reviewCard .stars {
+  color: var(--third-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.home .homeReviews .reviewsContainer .reviewCard p {
+  font-style: italic;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.home .homeReviews .reviewsContainer .reviewCard h4 {
+  color: var(--third-color);
+  margin-top: 1rem;
+}
+
+.home .homeSpecials h2, .home .homeReviews h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--heading-spacing);
+}
+.home .homeSpecials h2::after, .home .homeReviews h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--third-color);
+}
+
+.menuPage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.menuPage .menuPageHeader {
+  margin-top: 2rem;
+  text-align: center;
+}
+.menuPage .menuPageHeader .filterSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.menuPage .menuPageHeader .filterSection .searchInput {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-border-radius);
+  border: 2px solid var(--border);
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  font-size: 1rem;
+}
+.menuPage .menuPageHeader .filterSection .searchInput:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.menuPage .menuPageHeader .filterSection .priceFilter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--para);
+}
+.menuPage .menuPageHeader .filterSection .priceFilter .priceRange {
+  width: 200px;
+  height: 4px;
+  -webkit-appearance: none;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+.menuPage .menuPageHeader .filterSection .priceFilter .priceRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--third-color);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menuPage .menuPageHeader .filterSection .priceFilter .priceRange::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.menuPage .menuPageHeader .filterSection .priceFilter span {
+  min-width: 100px;
+  font-size: 0.9rem;
+}
+.menuPage .menuPageHeader .filterSection .priceSort {
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-border-radius);
+  border: 2px solid var(--border);
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 180px;
+}
+.menuPage .menuPageHeader .filterSection .priceSort:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.menuPage .menuPageHeader .filterSection .priceSort option {
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  padding: 0.5rem;
+}
+.menuPage .menuPageMain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  position: relative;
+}
+.menuPage .menuPageMain .menuSidebar {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.menuPage .menuPageMain .menuSidebar .scroll-arrow {
+  position: absolute;
+  z-index: 1;
+  background: var(--main-bg-color2);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  top: 1rem;
+}
+.menuPage .menuPageMain .menuSidebar .scroll-arrow:hover {
+  opacity: 1;
+}
+.menuPage .menuPageMain .menuSidebar .scroll-arrow.left {
+  left: 0.5rem;
+}
+.menuPage .menuPageMain .menuSidebar .scroll-arrow.right {
+  right: 0.5rem;
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 1rem;
+  margin: 0 3rem;
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain::-webkit-scrollbar {
+  display: none;
+  height: 8px;
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain::-webkit-scrollbar-track {
+  background: var(--main-bg-color2);
+  border-radius: var(--button-border-radius);
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--button-border-radius);
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain::-webkit-scrollbar-thumb:hover {
+  background: var(--third-color);
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain ul {
+  display: flex;
+  gap: 1rem;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain ul .menuSidebarItems {
+  border: 2px solid var(--border);
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  min-width: 10rem;
+  width: 12rem;
+  cursor: pointer;
+  border-radius: var(--button-border-radius);
+  transition: transform 0.3s ease;
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain ul .menuSidebarItems:hover {
+  background-color: var(--main-bg-color2);
+  border: 2px solid var(--third-color);
+}
+.menuPage .menuPageMain .menuSidebar .menuSidebarMain ul .menuSidebarItems.active {
+  background-color: var(--main-bg-color2);
+  border: 2px solid var(--third-color);
+  transform: scale(1.05);
+}
+.menuPage .menuPageMain .menuContent {
+  width: 100%;
+}
+.menuPage .menuPageMain .menuContent .menuContentHeader {
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.menuPage .menuPageMain .menuContent .menuContentHeader h2 {
+  color: var(--third-color);
+  font-size: 2rem;
+}
+.menuPage .menuPageMain .menuContent .menuContentHeader .priceSort {
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-border-radius);
+  border: 2px solid var(--border);
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 180px;
+}
+.menuPage .menuPageMain .menuContent .menuContentHeader .priceSort:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.menuPage .menuPageMain .menuContent .menuContentHeader .priceSort option {
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  padding: 0.5rem;
+}
+.menuPage .menuPageMain .menuContent .filterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.menuPage .menuPageMain .menuContent .filterSection .searchInput {
+  flex: 1;
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-border-radius);
+  border: 2px solid var(--border);
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  font-size: 1rem;
+}
+.menuPage .menuPageMain .menuContent .filterSection .searchInput:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.menuPage .menuPageMain .menuContent .filterSection .priceSort {
+  min-width: 180px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-border-radius);
+  border: 2px solid var(--border);
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.menuPage .menuPageMain .menuContent .filterSection .priceSort:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.menuPage .menuPageMain .menuContent .filterSection .priceSort option {
+  background-color: var(--main-bg-color2);
+  color: var(--para);
+  padding: 0.5rem;
+}
+.menuPage .menuPageMain .menu {
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.menuPage .menuPageMain .menu .menuHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.menuPage .menuPageMain .menu .menuHeader h1 {
+  font-size: 2.5rem;
+  color: var --third-color;
+}
+.menuPage .menuPageMain .menu .menuMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border-bottom: 1px dashed var(--border);
+  transition: all 0.3s ease;
+  width: 85%;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem:hover {
+  background-color: var(--main-bg-color2);
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  max-width: calc(100% - 120px);
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft .menuItemImage {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  border-radius: var(--button-border-radius);
+  overflow: hidden;
+  background-color: var(--main-bg-color2);
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft .menuItemImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft .menuItemInfo {
+  flex: 1;
+  min-width: 0;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft .menuItemInfo h2 {
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemLeft .menuItemInfo p {
+  color: var(--para);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .price {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .addToCartBtn {
+  opacity: 0;
+  background-color: var(--third-color);
+  color: var(--main-bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .addToCartBtn:hover {
+  transform: scale(1.05);
+  background-color: var(--third-color);
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .addToCartBtn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .cartControls {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .cartControls button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--main-bg-color2);
+  border: 2px solid var(--third-color);
+  color: var(--third-color);
+  cursor: pointer;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .cartControls button:hover {
+  background-color: var(--third-color);
+  color: var(--main-bg-color);
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight .cartSection .cartControls span {
+  min-width: 30px;
+  text-align: center;
+  color: var(--heading);
+  font-weight: bold;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight:hover .cartSection .addToCartBtn {
+  opacity: 1;
+}
+.menuPage .menuPageMain .menu .menuMain .menuItem .menuItemRight:hover .cartSection .cartControls {
+  opacity: 1;
+}
+.menuPage .abstractBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.05;
+}
+.menuPage .abstractBackground img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(5px);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
+  margin: 0;
+  padding: 0;
+  color: var(--heading);
+}
+body p {
+  padding: 0;
+  margin: 0;
+  color: var(--para);
+  font-size: var(--para-font-size);
+  margin-bottom: var(--spacing3);
+}
+body h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 700;
+  margin-bottom: var(--spacing1);
+}
+body h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+  margin-bottom: var(--spacing2);
+}
+body h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  margin-bottom: var(--spacing3);
+}
+body h4 {
+  font-size: var(--h4-font-size);
+  font-weight: 700;
+  color: var(--para);
+}
+body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--para);
+}
+body a {
+  text-decoration: none;
+  color: var(--para);
+  cursor: pointer;
+}
+body a:hover {
+  color: var(--heading);
+}
+body .logo {
+  font-size: 2rem;
+  color: var(--para);
+  cursor: pointer;
+}
+body .logo:hover {
+  color: var(--heading);
+}
+body input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  margin: 0.5rem 0;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--para);
+  background-color: var(--main-bg-color2);
+}
+body button {
+  color: var(--para);
+  background-color: var(--main-bg-color2);
+  border: 1px solid var(--border);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  margin-top: var(--spacing1);
+  cursor: pointer;
+}
+body button:hover {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--third-color);
+}
+
+.Toastify__toast {
+  background-color: var(--main-bg-color2) !important;
+  border: 2px solid var(--third-color);
+  color: var(--para) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--third-color) !important;
+}
+
+.Toastify__close-button {
+  color: var(--para) !important;
+}
+
+:root {
+  --main-bg-color: #1b1b1b;
+  --main-bg-color2: #282828;
+  --primary-color1: #ffffff;
+  --primary-color2: #25855a;
+  --third-color: #ffde0ac7;
+  --heading: #ffffff;
+  --para: #ffffffb6;
+  --border: #ffffff25;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.17rem;
+  --h4-font-size: 1rem;
+  --para-font-size: 1rem;
+  --spacing1: 0.5rem;
+  --spacing2: 0.6rem;
+  --spacing3: 0.2rem;
+  --heading-spacing: 2rem;
+  --card-padding: 1rem;
+  --button-border-radius: 0.5rem;
+  --button-padding: 0.5rem 2rem;
+  --button-font-size: 0.8rem;
+}/*# sourceMappingURL=main.css.map */

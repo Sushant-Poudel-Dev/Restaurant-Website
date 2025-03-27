@@ -1,0 +1,143 @@
+@import "../pages/layout";
+@import "../pages/home";
+@import "../pages/menuPage";
+
+body {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    padding: 0;
+    color: var(--heading);
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    color: var(--para);
+    font-size: var(--para-font-size);
+    margin-bottom: var(--spacing3);
+  }
+  h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 700;
+    margin-bottom: var(--spacing1);
+  }
+  h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin-bottom: var(--spacing2);
+  }
+  h3 {
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+    margin-bottom: var(--spacing3);
+  }
+  h4 {
+    font-size: var(--h4-font-size);
+    font-weight: 700;
+    color: var(--para);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--para);
+  }
+  a {
+    text-decoration: none;
+    color: var(--para);
+    cursor: pointer;
+    &:hover {
+      color: var(--heading);
+    }
+  }
+  .logo {
+    font-size: 2rem;
+    color: var(--para);
+    cursor: pointer;
+    &:hover {
+      color: var(--heading);
+    }
+  }
+  input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    margin: 0.5rem 0;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--para);
+    background-color: var(--main-bg-color2);
+  }
+  button {
+    color: var(--para);
+    background-color: var(--main-bg-color2);
+    border: 1px solid var(--border);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
+    margin-top: var(--spacing1);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main-bg-color);
+      border: 1px solid var(--third-color);
+    }
+  }
+}
+
+// Custom toast styles
+.Toastify__toast {
+  background-color: var(--main-bg-color2) !important;
+  border: 2px solid var(--third-color);
+  color: var(--para) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--third-color) !important;
+}
+
+.Toastify__close-button {
+  color: var(--para) !important;
+}
+
+:root {
+  --main-bg-color: #1b1b1b;
+  --main-bg-color2: #282828;
+  --primary-color1: #ffffff;
+  --primary-color2: #25855a;
+  --third-color: #ffde0ac7;
+  --heading: #ffffff;
+  --para: #ffffffb6;
+  --border: #ffffff25;
+
+  // Headers
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.17rem;
+  --h4-font-size: 1rem;
+
+  // Para
+  --para-font-size: 1rem;
+
+  // Spacing
+  --spacing1: 0.5rem;
+  --spacing2: 0.6rem;
+  --spacing3: 0.2rem;
+  --heading-spacing: 2rem;
+
+  //   Cards
+  --card-padding: 1rem;
+
+  //   Buttons
+  --button-border-radius: 0.5rem;
+  --button-padding: 0.5rem 2rem;
+  --button-font-size: 0.8rem;
+}
