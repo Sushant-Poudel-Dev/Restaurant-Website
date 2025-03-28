@@ -3,11 +3,13 @@ import Sidebar from "../components/UI/Sidebar";
 import Menu from "../components/UI/Menu";
 import menu from "../data/menu";
 import AbstractBackground from "../media/AbstractBackground.jpg";
+import ReservationForm from "../components/UI/ReservationForm";
 
 const MenuPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(menu.categories[0]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("none");
+  const [showReservation, setShowReservation] = useState(false);
 
   const handleCategorySelect = (categoryName) => {
     const category = menu.categories.find((cat) => cat.name === categoryName);
@@ -68,6 +70,12 @@ const MenuPage = () => {
         <div className='menuPageHeader'>
           <h1>Our Menu</h1>
           <p>Choose what you want to order</p>
+          <button
+            className='reserveButton'
+            onClick={() => setShowReservation(true)}
+          >
+            Reserve a Table
+          </button>
         </div>
         <div className='menuPageMain'>
           <Sidebar
@@ -99,6 +107,25 @@ const MenuPage = () => {
           </div>
         </div>
       </div>
+      {showReservation && (
+        <div
+          className='modalOverlay'
+          onClick={() => setShowReservation(false)}
+        >
+          <div
+            className='modalContent'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className='closeButton'
+              onClick={() => setShowReservation(false)}
+            >
+              ×
+            </button>
+            <ReservationForm />
+          </div>
+        </div>
+      )}
     </>
   );
 };

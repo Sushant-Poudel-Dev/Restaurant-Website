@@ -86,6 +86,19 @@
         }
       }
     }
+
+    .reserveButton {
+      margin-top: 1rem;
+      background: var(--third-color);
+      color: var(--main-bg-color);
+      padding: 0.8rem 2rem;
+      border: none;
+      font-weight: bold;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
   }
   .menuPageMain {
     display: flex;
@@ -442,5 +455,164 @@
       object-fit: cover;
       filter: blur(5px);
     }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+
+  .modalContent {
+    position: relative;
+    background: var(--main-bg-color);
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .closeButton {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: var(--main-bg-color2);
+      border: none;
+      font-size: 1.2rem;
+      color: var(--para);
+      cursor: pointer;
+      padding: 0.4rem;
+      margin: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--third-color);
+        background: var(--border);
+        transform: rotate(90deg);
+      }
+    }
+
+    .reservationForm {
+      .formHeader {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+          color: var(--heading);
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: var(--para);
+          opacity: 0.8;
+          font-size: 0.9rem;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .formGroup {
+          display: flex;
+          gap: 1rem;
+
+          input,
+          select {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            background: var(--main-bg-color2);
+            border: 2px solid var(--border);
+            border-radius: var(--button-border-radius);
+            color: var(--para);
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            appearance: none;
+            cursor: pointer;
+
+            &:focus {
+              border-color: var(--third-color);
+              outline: none;
+            }
+
+            &::placeholder {
+              color: var(--para);
+              opacity: 0.7;
+            }
+
+            option {
+              background: var(--main-bg-color2);
+              color: var(--para);
+              padding: 0.5rem;
+            }
+          }
+
+          select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 1rem) center;
+            padding-right: 2.5rem;
+          }
+        }
+
+        button[type="submit"] {
+          background: var(--third-color);
+          color: var(--main-bg-color);
+          padding: 1rem;
+          border: none;
+          border-radius: var(--button-border-radius);
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.2s;
+          margin-top: 0.5rem;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -5,6 +5,7 @@ import Layout from "./components/Layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import MenuPage from "./pages/MenuPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
+import GalleryPage from "./pages/GalleryPage.jsx";
 import { CartProvider } from "./context/CartContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +30,10 @@ function App() {
             <Route
               path='/cart'
               element={<CartPage />}
+            />
+            <Route
+              path='/gallery'
+              element={<GalleryPage />}
             />
           </Route>
         </Routes>

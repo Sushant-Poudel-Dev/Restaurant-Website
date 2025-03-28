@@ -40,6 +40,9 @@ const Navbar = () => {
               <Link to='/menu'>Menu</Link>
             </li>
             <li>
+              <Link to='/gallery'>Gallery</Link>
+            </li>
+            <li>
               <Link to='/menu'>About</Link>
             </li>
             <li>

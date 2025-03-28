@@ -511,6 +511,17 @@
   color: var(--para);
   padding: 0.5rem;
 }
+.menuPage .menuPageHeader .reserveButton {
+  margin-top: 1rem;
+  background: var(--third-color);
+  color: var(--main-bg-color);
+  padding: 0.8rem 2rem;
+  border: none;
+  font-weight: bold;
+}
+.menuPage .menuPageHeader .reserveButton:hover {
+  transform: translateY(-2px);
+}
 .menuPage .menuPageMain {
   display: flex;
   flex-direction: column;
@@ -828,6 +839,156 @@
   filter: blur(5px);
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+.modalOverlay .modalContent {
+  position: relative;
+  background: var(--main-bg-color);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.modalOverlay .modalContent .closeButton {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: var(--main-bg-color2);
+  border: none;
+  font-size: 1.2rem;
+  color: var(--para);
+  cursor: pointer;
+  padding: 0.4rem;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.modalOverlay .modalContent .closeButton:hover {
+  color: var(--third-color);
+  background: var(--border);
+  transform: rotate(90deg);
+}
+.modalOverlay .modalContent .reservationForm .formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.modalOverlay .modalContent .reservationForm .formHeader h2 {
+  color: var(--heading);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.modalOverlay .modalContent .reservationForm .formHeader p {
+  color: var(--para);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+.modalOverlay .modalContent .reservationForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup {
+  display: flex;
+  gap: 1rem;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup input,
+.modalOverlay .modalContent .reservationForm form .formGroup select {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  background: var(--main-bg-color2);
+  border: 2px solid var(--border);
+  border-radius: var(--button-border-radius);
+  color: var(--para);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup input:focus,
+.modalOverlay .modalContent .reservationForm form .formGroup select:focus {
+  border-color: var(--third-color);
+  outline: none;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup input::-moz-placeholder, .modalOverlay .modalContent .reservationForm form .formGroup select::-moz-placeholder {
+  color: var(--para);
+  opacity: 0.7;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup input::placeholder,
+.modalOverlay .modalContent .reservationForm form .formGroup select::placeholder {
+  color: var(--para);
+  opacity: 0.7;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup input option,
+.modalOverlay .modalContent .reservationForm form .formGroup select option {
+  background: var(--main-bg-color2);
+  color: var(--para);
+  padding: 0.5rem;
+}
+.modalOverlay .modalContent .reservationForm form .formGroup select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  padding-right: 2.5rem;
+}
+.modalOverlay .modalContent .reservationForm form button[type=submit] {
+  background: var(--third-color);
+  color: var(--main-bg-color);
+  padding: 1rem;
+  border: none;
+  border-radius: var(--button-border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+.modalOverlay .modalContent .reservationForm form button[type=submit]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .cartPage {
   min-height: 100vh;
   padding: 2rem;
@@ -1024,6 +1185,88 @@
 }
 .cartPage .cartContainer .cartRight .orderSummary .checkoutBtn:active {
   transform: translateY(0);
+}
+
+.galleryPage {
+  padding: 2rem;
+}
+.galleryPage h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--third-color);
+}
+.galleryPage .galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.galleryPage .galleryGrid .galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.galleryPage .galleryGrid .galleryItem.large {
+  grid-row: span 2;
+}
+.galleryPage .galleryGrid .galleryItem.medium {
+  grid-row: span 1;
+}
+.galleryPage .galleryGrid .galleryItem.small {
+  grid-row: span 1;
+}
+.galleryPage .galleryGrid .galleryItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.galleryPage .galleryGrid .galleryItem .placeholderImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.galleryPage .galleryGrid .galleryItem .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.galleryPage .galleryGrid .galleryItem .overlay h3 {
+  color: white;
+  margin: 0;
+}
+.galleryPage .galleryGrid .galleryItem:hover img {
+  transform: scale(1.1);
+}
+.galleryPage .galleryGrid .galleryItem:hover .placeholderImage {
+  transform: scale(1.1);
+}
+.galleryPage .galleryGrid .galleryItem:hover .overlay {
+  opacity: 1;
+}
+
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 1;
 }
 
 body {
