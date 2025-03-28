@@ -8,7 +8,6 @@ import HomeReviews from "../components/UI/HomeReviews";
 const Home = () => {
   return (
     <div className='home'>
-      {/* <Watermark /> */}
       <HomeHero />
       <HomeFeatures />
       <HomeServices />
