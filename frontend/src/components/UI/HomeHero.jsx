@@ -4,8 +4,6 @@ const HomeHero = () => {
   return (
     <>
       <div className='homeHero'>
-        <div className='heroImageDecor1'></div>
-        <div className='heroImageDecor2'></div>
         <div className='heroText'>
           <h1>Welcome to the Niramesh Indian Cuisine</h1>
           <p>
