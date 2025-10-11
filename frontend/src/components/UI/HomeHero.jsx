@@ -5,7 +5,7 @@ const HomeHero = () => {
     <>
       <div className='homeHero'>
         <div className='heroText'>
-          <h1>Welcome to the Niramesh Indian Cuisine</h1>
+          <h1>Welcome to the Indian Cuisine</h1>
           <p>
             We are a family-owned restaurant that serves authentic Indian
             cuisine. Our dishes are made with fresh ingredients and traditional
